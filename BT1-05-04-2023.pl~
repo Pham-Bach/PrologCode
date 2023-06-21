@@ -1,0 +1,53 @@
+% Lexicon
+propn_sg --> [nam].
+propn_do --> [lan].
+
+v_thich --> [thich].
+v_doc --> [doc].
+v_tang --> [tang].
+v_co --> [co].
+
+p_o --> [o].
+p_cua --> [cua].
+p_cho --> [cho].
+
+n_sach --> [sach].
+n_truong --> [truong].
+n_thu_vien --> [thu-vien].
+
+cd_may --> [may].
+cd_mot --> [mot].
+un_cuon --> [cuon].
+
+adv_rat --> [rat].
+adv_moi --> [moi].
+adj_hay --> [hay].
+adj_moi --> [moi].
+
+
+% Grammar Rules
+s --> np_sg, vp.
+
+np_sg --> propn_sg.
+
+vp --> v_thich_np_doc_sach.
+vp --> v_tang_np_cuon_sach.
+vp --> v_co_np_may_cuon_sach_rat_hay.
+
+v_thich_np_doc_sach --> v_thich, np_doc_sach.
+
+v_tang_np_cuon_sach --> adv_moi, v_tang, p_cho, np_do, np_mot_cuon_sach_moi.
+
+v_co_np_may_cuon_sach_rat_hay --> v_co, np_may_cuon_sach_rat_hay.
+
+np_do --> propn_do.
+
+np_doc_sach --> v_doc, n_sach, pp_o_truong.
+pp_o_truong --> p_o, n_thu_vien, p_cua, n_truong.
+
+
+np_mot_cuon_sach_moi --> cd_mot, un_cuon, n_sach, adj_moi.
+
+np_may_cuon_sach_rat_hay --> cd_may, un_cuon, n_sach, adv_rat, adj_hay.
+
+

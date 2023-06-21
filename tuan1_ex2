@@ -1,0 +1,5 @@
+husband_of(a,b).
+wife_of(b,a).
+marry(a,b).
+male(a).
+female(b).
